@@ -51,7 +51,6 @@ client.connect((err) => {
   });
 
  /// Delete Sevice
-
  app.delete("/delteServices/:id", async (req, res) => {
   const result = await servicesCollection.deleteOne({
     _id: ObjectId(req.params.id),
@@ -77,8 +76,7 @@ client.connect((err) => {
   });
 
   
-  /// Delete order
-
+  /// Delete Order
   app.delete("/delteOrder/:id", async (req, res) => {
     const result = await bookingsCollection.deleteOne({
       _id: ObjectId(req.params.id),
@@ -86,14 +84,15 @@ client.connect((err) => {
     res.send(result);
   });
 
+
   // All Order
   app.get("/allOrders", async (req, res) => {
     const result = await bookingsCollection.find({}).toArray();
     res.send(result);
-  });
+  }); 
+
 
   // Update Statuses
-
   app.put("/updateStatus/:id", (req, res) => {
     const id = req.params.id;
     const updatedStatus = req.body.status;
