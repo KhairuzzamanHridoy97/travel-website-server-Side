@@ -92,7 +92,7 @@ client.connect((err) => {
   }); 
 
 
-  // Update Statuses
+  // Update Status
   app.put("/updateStatus/:id", (req, res) => {
     const id = req.params.id;
     const updatedStatus = req.body.status;
