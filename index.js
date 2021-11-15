@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
 
 
 app.get("/heroku",(req,res)=>{
-  res.send('Hello Heroku Server ');
+  res.send('Hello Heroku Server');
 })
 
 client.connect((err) => {
