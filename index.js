@@ -24,6 +24,10 @@ app.get("/", (req, res) => {
   res.send("Hello Assignment 11");
 });
 
+app.get("/heroku",(req,res)=>{
+  res.send('Hello Heroku');
+})
+
 client.connect((err) => {
   const servicesCollection = client.db("khTourDb").collection("services");
   const bookingsCollection = client.db("khTourDb").collection("bookings");
