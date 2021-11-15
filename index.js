@@ -24,8 +24,9 @@ app.get("/", (req, res) => {
   res.send("Hello Assignment 11");
 });
 
+
 app.get("/heroku",(req,res)=>{
-  res.send('Hello Heroku');
+  res.send('Hello Heroku Server ');
 })
 
 client.connect((err) => {
