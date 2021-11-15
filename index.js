@@ -48,7 +48,7 @@ client.connect((err) => {
       .find({ _id: ObjectId(req.params.id) })
       .toArray();
     res.send(result[0]);
-  });
+  });  
 
  /// Delete Sevice
  app.delete("/delteServices/:id", async (req, res) => {
@@ -56,7 +56,7 @@ client.connect((err) => {
     _id: ObjectId(req.params.id),
   });
   res.send(result);
-});
+}); 
 
 
 
